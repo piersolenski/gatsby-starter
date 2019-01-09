@@ -12,8 +12,8 @@ module.exports = {
         js: 'never',
       },
     ],
-
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/no-array-index-key': [0],
     'react/require-default-props': [0],
     'global-require': [0],
     // Recommend not to leave any console.log in your code
