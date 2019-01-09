@@ -12,6 +12,7 @@ module.exports = {
         js: 'never',
       },
     ],
+    'react/forbid-prop-types': [0],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/no-array-index-key': [0],
     'react/require-default-props': [0],
