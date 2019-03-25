@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Github from '../icons/GitHub';
 
 const Wrapper = styled.footer`
   grid-column: start / end;
@@ -23,11 +24,15 @@ const Inner = styled.div`
 const Footer = ({ siteTitle }) => (
   <Wrapper>
     <Inner>
-      <span>{siteTitle}</span>
       <span>
         &copy;
+        {siteTitle}
+        &nbsp;
         {new Date().getFullYear()}
       </span>
+      <a href="https://github.com/superfunkminister/gatsby-starter">
+        <Github />
+      </a>
     </Inner>
   </Wrapper>
 );
