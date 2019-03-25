@@ -5,7 +5,7 @@
 - Gatsby
 - Styled Components + Polished
 - Prettier + ESLint integration
-- SVG Spriting
+- SVGR
 
 ## 🚀 Getting started
 
