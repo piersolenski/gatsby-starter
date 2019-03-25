@@ -7,7 +7,15 @@ module.exports = {
     author: `Piers Olenski`,
   },
   plugins: [
-    `gatsby-plugin-eslint`,
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-svg-sprite`,
