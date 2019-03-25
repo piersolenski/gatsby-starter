@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled, { ThemeProvider } from 'styled-components';
-import GlobalStyles from '../utils/globalStyles';
-import theme from '../utils/theme';
+import GlobalStyles from '../../utils/globalStyles';
+import theme from '../../utils/theme';
 import Header from './Header';
 import Footer from './Footer';
 

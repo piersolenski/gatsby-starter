@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { fluidRange } from 'polished';
 
-import Button from '../components/Button';
-import Image from '../components/Image';
-import Layout from '../components/Layout';
-import Main from '../components/Main';
-import SEO from '../components/Seo';
-import { H1 } from '../components/Typography';
+import Button from '../components/common/Button';
+import Image from '../components/common/Image';
+import Layout from '../components/common/Layout';
+import Main from '../components/common/Main';
+import SEO from '../components/common/Seo';
+import { H1 } from '../components/common/Typography';
 
 const Hero = styled.div`
   background: #ddd;

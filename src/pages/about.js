@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../components/Layout';
-import Main from '../components/Main';
-import SEO from '../components/Seo';
-import { H1, P } from '../components/Typography';
+import Layout from '../components/common/Layout';
+import Main from '../components/common/Main';
+import SEO from '../components/common/Seo';
+import { H1, P } from '../components/common/Typography';
 
 const SecondPage = () => (
   <Layout>
