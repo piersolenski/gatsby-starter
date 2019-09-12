@@ -1,7 +1,7 @@
 import React from 'react';
 
-const GitHub = props => (
-  <svg height={32} viewBox="0 0 16 16" width={32} {...props}>
+const GitHub = () => (
+  <svg height={32} viewBox="0 0 16 16" width={32}>
     <path
       fill="white"
       fillRule="evenodd"
