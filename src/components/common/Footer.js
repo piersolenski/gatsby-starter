@@ -26,10 +26,10 @@ export default function Footer({ siteTitle }) {
     <Wrapper>
       <Inner>
         <span>
-          &copy;
-          {siteTitle}
-          &nbsp;
+          &copy;&nbsp;
           {new Date().getFullYear()}
+          &nbsp;
+          {siteTitle}
         </span>
         <a href="https://github.com/superfunkminister/gatsby-starter">
           <Github />
