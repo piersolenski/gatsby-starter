@@ -8,6 +8,7 @@ const UnstyledButton = styled.button`
   cursor: pointer;
   text-align: left;
   color: currentColor;
+  -webkit-tap-highlight-color: transparent;
 `;
 
 export default UnstyledButton;
