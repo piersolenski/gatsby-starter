@@ -11,7 +11,7 @@
 
 ### Installation
 
-Install Gatsby's command line tool.
+Install the project dependencies.
 
 `npm i`
 
