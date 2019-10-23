@@ -29,20 +29,20 @@ const Hero = styled.div`
   )}
 `;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `react`, `digital`]} />
-    <Hero>Hero</Hero>
-    <Main>
-      <H1>
-        A simple starter project to get up and developing quickly with Gatsby.
-      </H1>
-      <Button to="/about">Check out another page.</Button>
-      <div style={{ maxWidth: `300px` }}>
-        <Image />
-      </div>
-    </Main>
-  </Layout>
-);
-
-export default IndexPage;
+export default function Index() {
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `react`, `digital`]} />
+      <Hero>Hero</Hero>
+      <Main>
+        <H1>
+          A simple starter project to get up and developing quickly with Gatsby.
+        </H1>
+        <Button to="/about">Check out another page.</Button>
+        <div style={{ maxWidth: `300px` }}>
+          <Image />
+        </div>
+      </Main>
+    </Layout>
+  );
+}

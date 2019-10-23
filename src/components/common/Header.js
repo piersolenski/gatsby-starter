@@ -28,21 +28,21 @@ const Nav = styled.nav`
   grid-gap: 4vw;
 `;
 
-const Header = ({ siteTitle }) => (
-  <Wrapper>
-    <Logo to="/">{siteTitle}</Logo>
-    <Nav>
-      {ROUTES.map(route => (
-        <Link key={route.path} to={route.path}>
-          {route.name}
-        </Link>
-      ))}
-    </Nav>
-  </Wrapper>
-);
+export default function Header({ siteTitle }) {
+  return (
+    <Wrapper>
+      <Logo to="/">{siteTitle}</Logo>
+      <Nav>
+        {ROUTES.map(route => (
+          <Link key={route.path} to={route.path}>
+            {route.name}
+          </Link>
+        ))}
+      </Nav>
+    </Wrapper>
+  );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
 };
-
-export default Header;

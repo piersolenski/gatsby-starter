@@ -15,34 +15,34 @@ const Grid = styled.div`
   grid-column-gap: 2%;
 `;
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+export default function Layout({ children }) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <Grid>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            {children}
-            <Footer siteTitle={data.site.siteMetadata.title} />
-          </Grid>
-        </>
-      </ThemeProvider>
-    )}
-  />
-);
+      `}
+      render={data => (
+        <ThemeProvider theme={theme}>
+          <>
+            <GlobalStyles />
+            <Grid>
+              <Header siteTitle={data.site.siteMetadata.title} />
+              {children}
+              <Footer siteTitle={data.site.siteMetadata.title} />
+            </Grid>
+          </>
+        </ThemeProvider>
+      )}
+    />
+  );
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;

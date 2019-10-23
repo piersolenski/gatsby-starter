@@ -39,19 +39,29 @@ const getElement = (href, onClick, to) => {
   return 'div';
 };
 
-const Button = ({ className, children, href, onClick, target, type, to }) => (
-  <Wrapper
-    as={getElement(href, onClick, to)}
-    className={className}
-    href={href}
-    onClick={onClick}
-    target={target}
-    to={to}
-    type={type}
-  >
-    {children}
-  </Wrapper>
-);
+export default function Button({
+  className,
+  children,
+  href,
+  onClick,
+  target,
+  type,
+  to,
+}) {
+  return (
+    <Wrapper
+      as={getElement(href, onClick, to)}
+      className={className}
+      href={href}
+      onClick={onClick}
+      target={target}
+      to={to}
+      type={type}
+    >
+      {children}
+    </Wrapper>
+  );
+}
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
@@ -62,5 +72,3 @@ Button.propTypes = {
   to: PropTypes.string,
   type: PropTypes.string,
 };
-
-export default Button;

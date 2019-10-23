@@ -15,7 +15,7 @@ const detailsQuery = graphql`
   }
 `;
 
-function SEO({ description, lang, meta, keywords, title }) {
+export default function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -92,5 +92,3 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 };
-
-export default SEO;

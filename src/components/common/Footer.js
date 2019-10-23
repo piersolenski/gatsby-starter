@@ -21,24 +21,24 @@ const Inner = styled.div`
   color: ${({ theme }) => theme.colors.white};
 `;
 
-const Footer = ({ siteTitle }) => (
-  <Wrapper>
-    <Inner>
-      <span>
-        &copy;
-        {siteTitle}
-        &nbsp;
-        {new Date().getFullYear()}
-      </span>
-      <a href="https://github.com/superfunkminister/gatsby-starter">
-        <Github />
-      </a>
-    </Inner>
-  </Wrapper>
-);
+export default function Footer({ siteTitle }) {
+  return (
+    <Wrapper>
+      <Inner>
+        <span>
+          &copy;
+          {siteTitle}
+          &nbsp;
+          {new Date().getFullYear()}
+        </span>
+        <a href="https://github.com/superfunkminister/gatsby-starter">
+          <Github />
+        </a>
+      </Inner>
+    </Wrapper>
+  );
+}
 
 Footer.propTypes = {
   siteTitle: PropTypes.string,
 };
-
-export default Footer;
