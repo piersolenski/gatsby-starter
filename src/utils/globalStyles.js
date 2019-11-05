@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import SourceSansProBold from '../fonts/SourceSansPro-Bold.ttf';
 import SourceSansProRegular from '../fonts/SourceSansPro-Regular.ttf';
 
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
 
   @font-face {
     font-family: SourceSansPro;
@@ -54,5 +54,3 @@ const GlobalStyle = createGlobalStyle`
     resize: vertical;
   }
 `;
-
-export default GlobalStyle;

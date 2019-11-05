@@ -1,5 +1,7 @@
 # Gatsby Starter
 
+A simple boilerplate for kickstarting [Gatsby](https://www.gatsbyjs.org/) projects.
+
 ## Features
 
 - Gatsby
@@ -11,7 +13,7 @@
 
 ### Installation
 
-Install Gatsby's command line tool.
+Install the project dependencies.
 
 `npm i`
 
