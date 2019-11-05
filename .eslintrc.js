@@ -16,14 +16,18 @@ module.exports = {
         js: 'never',
       },
     ],
+    'import/prefer-default-export': [0],
     'jsx-a11y/media-has-caption': [0],
+    'no-underscore-dangle': [0],
     'no-use-before-define': [0],
     'react/destructuring-assignment': [0],
     'react/forbid-prop-types': [0],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-props-no-spreading': [0],
     'react/no-array-index-key': [0],
     'react/no-danger': [0],
     'react/require-default-props': [0],
+    'react/static-property-placement': [0],
     'global-require': [0],
     // Recommend not to leave any console.log in your code
     // Use console.error, console.warn and console.info instead
