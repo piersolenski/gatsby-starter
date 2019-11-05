@@ -3,6 +3,7 @@
   "private": true,
   "description": "A simple starter project to get up and developing quickly with Gatsby",
   "version": "1.0.0",
+  "homepage": "https://example.com",
   "author": "Piers Olenski",
   "dependencies": {
     "gatsby": "^2.15.14",

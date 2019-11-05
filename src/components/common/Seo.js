@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+import PKG from '../../../package.json';
+
 const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
@@ -15,7 +17,14 @@ const detailsQuery = graphql`
   }
 `;
 
-function SEO({ description, lang, meta, keywords, title }) {
+export default function SEO({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  image,
+}) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -41,6 +50,18 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 property: `og:description`,
                 content: metaDescription,
+              },
+              {
+                property: `og:image`,
+                content: image,
+              },
+              {
+                property: `og:image:width`,
+                content: 1200,
+              },
+              {
+                property: `og:image:height`,
+                content: 630,
               },
               {
                 property: `og:type`,
@@ -80,17 +101,16 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
+  image: `${PKG.homepage}/open-graph.png`,
   lang: `en`,
   meta: [],
-  keywords: [],
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
+  image: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 };
-
-export default SEO;
