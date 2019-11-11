@@ -50,6 +50,13 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
   textarea {
     resize: vertical;
   }
