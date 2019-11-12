@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const UnstyledButton = styled.button`
   appearance: none;
   background: none;
+  font-family: inherit;
   border: 0;
   padding: 0;
   cursor: pointer;
