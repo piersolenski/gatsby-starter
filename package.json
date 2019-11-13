@@ -3,11 +3,12 @@
   "private": true,
   "description": "A simple starter project to get up and developing quickly with Gatsby",
   "version": "1.0.0",
-  "homepage": "https://example.com",
   "author": "Piers Olenski",
   "dependencies": {
     "gatsby": "^2.17.1",
     "gatsby-image": "^2.2.29",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sitemap": "^2.2.20",
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "react": "16.11.0",

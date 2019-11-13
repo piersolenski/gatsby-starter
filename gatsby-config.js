@@ -5,6 +5,7 @@ module.exports = {
     title: `Gatsby Starter`,
     description: `Everything you need for a sweet Gatsby site.`,
     author: `Piers Olenski`,
+    siteUrl: `https://www.example.com`,
   },
   plugins: [
     {
@@ -34,7 +35,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
