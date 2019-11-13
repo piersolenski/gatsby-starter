@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import PKG from '../../../package.json';
-
 const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
-      siteMetadata {
+      metaData: siteMetadata {
         title
         description
         author
+        url: siteUrl
       }
     }
   }
@@ -22,15 +21,16 @@ export default function SEO({ description, lang, meta, title, image }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
+        const { metaData } = data.site;
+        const metaDescription = description || metaData.description;
+        const ogImage = image || `${metaData.url}/open-graph.png`;
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s | ${metaData.title}`}
             meta={[
               {
                 name: `description`,
@@ -46,7 +46,7 @@ export default function SEO({ description, lang, meta, title, image }) {
               },
               {
                 property: `og:image`,
-                content: image,
+                content: ogImage,
               },
               {
                 property: `og:image:width`,
@@ -66,7 +66,7 @@ export default function SEO({ description, lang, meta, title, image }) {
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: metaData.author,
               },
               {
                 name: `twitter:title`,
@@ -85,7 +85,6 @@ export default function SEO({ description, lang, meta, title, image }) {
 }
 
 SEO.defaultProps = {
-  image: `${PKG.homepage}/open-graph.png`,
   lang: `en`,
   meta: [],
 };
