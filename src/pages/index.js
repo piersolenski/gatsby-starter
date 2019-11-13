@@ -32,7 +32,7 @@ const Hero = styled.div`
 export default function Index() {
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `react`, `digital`]} />
+      <SEO title="Home" />
       <Hero>Hero</Hero>
       <Main>
         <H1>

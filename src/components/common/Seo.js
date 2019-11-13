@@ -17,14 +17,7 @@ const detailsQuery = graphql`
   }
 `;
 
-export default function SEO({
-  description,
-  lang,
-  meta,
-  keywords,
-  title,
-  image,
-}) {
+export default function SEO({ description, lang, meta, title, image }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -83,16 +76,7 @@ export default function SEO({
                 name: `twitter:description`,
                 content: metaDescription,
               },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
+            ].concat(meta)}
           />
         );
       }}
@@ -109,7 +93,6 @@ SEO.defaultProps = {
 SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
-  keywords: PropTypes.arrayOf(PropTypes.string),
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
