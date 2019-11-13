@@ -25,6 +25,11 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
   }
 
+  ::selection { 
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.black}; 
+  }
+
   html {
     font-family: SourceSansPro;
     color: ${props => props.theme.colors.black};
