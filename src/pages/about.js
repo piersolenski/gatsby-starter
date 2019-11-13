@@ -6,12 +6,15 @@ import Main from '../components/common/Main';
 import SEO from '../components/common/Seo';
 import { H1, P } from '../components/common/Typography';
 
-export default function SecondPage() {
+export default function About() {
   return (
     <Layout>
       <Main>
-        <SEO title="Page two" />
-        <H1>Hi from the second page</H1>
+        <SEO
+          title="About"
+          description="A longer description of the about page."
+        />
+        <H1>About</H1>
         <P>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           consectetur nisi ex, nec cursus turpis eleifend sed. Proin ornare
