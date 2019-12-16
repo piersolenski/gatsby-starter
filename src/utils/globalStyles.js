@@ -55,6 +55,10 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  figure {
+    margin: 0;
+  }
+
   input,
   button,
   textarea,
