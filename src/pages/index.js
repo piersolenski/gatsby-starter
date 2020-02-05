@@ -1,48 +1,37 @@
 import React from 'react';
-import styled from 'styled-components';
-import { fluidRange } from 'polished';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
-import Button from '../components/common/Button';
-import Image from '../components/common/Image';
 import Layout from '../components/common/Layout';
-import Main from '../components/common/Main';
 import SEO from '../components/common/Seo';
-import { H1 } from '../components/common/Typography';
+import Hero from '../components/home/Hero';
+import Main from '../components/home/Main';
 
-const Hero = styled.div`
-  background: #ddd;
-  color: #aaa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-column: start / end;
-  font-size: 21px;
-  font-weight: bold;
-  ${fluidRange(
-    {
-      prop: 'height',
-      fromSize: '200px',
-      toSize: '600px',
-    },
-    '400px',
-    '1400px'
-  )}
-`;
-
-export default function Index() {
+export default function Index({ data }) {
   return (
     <Layout>
-      <SEO title="Home" />
-      <Hero>Hero</Hero>
-      <Main>
-        <H1>
-          A simple starter project to get up and developing quickly with Gatsby.
-        </H1>
-        <Button to="/about">Check out another page.</Button>
-        <div style={{ maxWidth: `300px` }}>
-          <Image />
-        </div>
-      </Main>
+      <SEO
+        title="Get started with Gatsby"
+        description="A simple starter project to get up and developing quickly with Gatsby."
+      />
+      <Hero image={data.heroImage.childImageSharp.fluid} />
+      <Main />
     </Layout>
   );
 }
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export const query = graphql`
+  query {
+    heroImage: file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
