@@ -76,4 +76,16 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.black}; 
   }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.black};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.purple};
+  }
 `;
