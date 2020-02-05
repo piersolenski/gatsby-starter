@@ -5,7 +5,10 @@ import styled from 'styled-components';
 
 import Grid from './Grid';
 
-const ROUTES = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }];
+const ROUTES = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+];
 
 const Wrapper = styled(Grid)`
   height: 96px;
