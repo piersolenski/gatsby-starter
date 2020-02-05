@@ -14,6 +14,8 @@ const Wrapper = styled.div`
   font-weight: bold;
   border: 0;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   line-height: 24px;
   position: relative;
   text-decoration: none;
@@ -58,7 +60,7 @@ export default function Button({
       to={to}
       type={type}
     >
-      {children}
+      {children} →
     </Wrapper>
   );
 }
