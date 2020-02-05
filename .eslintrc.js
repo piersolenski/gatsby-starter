@@ -38,6 +38,7 @@ module.exports = {
         allow: ['warn', 'error', 'info'],
       },
     ],
+    'no-prototype-builtins': [0],
     // ESLint plugin for prettier formatting
     // https://github.com/prettier/eslint-plugin-prettier
     'prettier/prettier': [
