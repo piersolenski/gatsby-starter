@@ -6,16 +6,16 @@
   "author": "Piers Olenski",
   "dependencies": {
     "focus-visible": "^5.0.2",
-    "gatsby": "^2.17.1",
-    "gatsby-image": "^2.2.29",
+    "gatsby": "^2.19.12",
+    "gatsby-image": "^2.2.40",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sitemap": "^2.2.20",
-    "polished": "^3.4.1",
+    "gatsby-plugin-sitemap": "^2.2.27",
+    "polished": "^3.4.4",
     "prop-types": "^15.7.2",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.4.0"
+    "styled-components": "^5.0.1"
   },
   "keywords": [
     "gatsby"
