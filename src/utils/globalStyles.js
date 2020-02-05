@@ -72,6 +72,11 @@ export default createGlobalStyle`
     white-space: pre;
   }
 
+  ul, ol {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
   ::selection { 
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.black}; 
