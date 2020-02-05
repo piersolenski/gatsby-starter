@@ -3,42 +3,41 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from '../icons/GitHub';
 
-const Wrapper = styled.footer`
-  grid-column: start / end;
-  background: ${({ theme }) => theme.colors.purple};
-  display: inherit;
-  grid-template-columns: inherit;
-  grid-gap: inherit;
-  grid-column: start / end;
-`;
+import Grid from './Grid';
 
-const Inner = styled.div`
-  grid-column: wrapper-start / wrapper-end;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+const Wrapper = styled(Grid)`
+  grid-column: full-bleed;
   height: 96px;
+  align-items: center;
   color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.purple};
 `;
 
-export default function Footer({ siteTitle }) {
+const Copyright = styled.p`
+  grid-column: col 1 / span 6;
+`;
+
+const Social = styled.a`
+  grid-column: col 7 / span 6;
+  justify-self: flex-end;
+`;
+
+export default function Footer({ author }) {
   return (
-    <Wrapper>
-      <Inner>
-        <span>
-          &copy;&nbsp;
-          {new Date().getFullYear()}
-          &nbsp;
-          {siteTitle}
-        </span>
-        <a href="https://github.com/superfunkminister/gatsby-starter">
-          <Github />
-        </a>
-      </Inner>
+    <Wrapper as="footer">
+      <Copyright>
+        &copy;&nbsp;
+        {new Date().getFullYear()}
+        &nbsp;
+        {author}
+      </Copyright>
+      <Social href="https://github.com/superfunkminister/gatsby-starter">
+        <Github />
+      </Social>
     </Wrapper>
   );
 }
 
 Footer.propTypes = {
-  siteTitle: PropTypes.string,
+  author: PropTypes.string.isRequired,
 };
