@@ -2,6 +2,8 @@
 
 A simple boilerplate for kickstarting [Gatsby](https://www.gatsbyjs.org/) projects.
 
+Check out the [demo](https://gatsby-starter-template.netlify.com)!
+
 ## Features
 
 - Gatsby
