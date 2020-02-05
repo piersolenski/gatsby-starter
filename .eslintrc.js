@@ -23,6 +23,7 @@ module.exports = {
     'react/destructuring-assignment': [0],
     'react/forbid-prop-types': [0],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-one-expression-per-line': [0],
     'react/jsx-props-no-spreading': [0],
     'react/no-array-index-key': [0],
     'react/no-danger': [0],
