@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Piers Olenski",
   "dependencies": {
+    "focus-visible": "^5.0.2",
     "gatsby": "^2.17.1",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-robots-txt": "^1.5.0",

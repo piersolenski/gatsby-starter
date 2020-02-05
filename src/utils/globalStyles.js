@@ -88,4 +88,8 @@ export default createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.purple};
   }
+
+  .js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+  }
 `;
