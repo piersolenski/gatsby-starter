@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Button from '../common/Button';
 import Grid from '../common/Grid';
-import { H1, H2, P } from '../common/Typography';
+import { H1, P } from '../common/Typography';
 
 const Features = styled.div`
   grid-column: col 1 / span 12;
