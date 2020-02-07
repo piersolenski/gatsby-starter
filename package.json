@@ -10,6 +10,7 @@
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sitemap": "^2.2.27",
+    "gatsby-starter-bootstrap": "git+https://github.com/superfunkminister/gatsby-starter-bootstrap.git",
     "polished": "^3.4.4",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
@@ -25,6 +26,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "start": "npm run dev",
+    "bootstrap": "node node_modules/gatsby-starter-bootstrap",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
