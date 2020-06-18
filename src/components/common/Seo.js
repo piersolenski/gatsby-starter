@@ -20,7 +20,7 @@ export default function SEO({ description, lang, meta, title, image }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const { metaData } = data.site;
         const metaDescription = description || metaData.description;
         const ogImage = image || `${metaData.url}/open-graph.png`;

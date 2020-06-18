@@ -34,7 +34,7 @@ export default function Header({ siteTitle }) {
     <Wrapper as="header">
       <Logo to="/">{siteTitle}</Logo>
       <Nav>
-        {ROUTES.map(route => (
+        {ROUTES.map((route) => (
           <Link key={route.path} to={route.path}>
             {route.name}
           </Link>

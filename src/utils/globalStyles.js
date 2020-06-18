@@ -27,8 +27,8 @@ export default createGlobalStyle`
 
   html {
     font-family: SourceSansPro;
-    color: ${props => props.theme.colors.black};
-    background: ${props => props.theme.colors.white}; 
+    color: ${(props) => props.theme.colors.black};
+    background: ${(props) => props.theme.colors.white}; 
     overflow-y: scroll;
   }
 

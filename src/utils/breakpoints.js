@@ -4,7 +4,7 @@ function invariant(condition, message) {
   }
 }
 
-const error = breakpoint =>
+const error = (breakpoint) =>
   `Breakpoint "${breakpoint}" does not exist in theme`;
 
 export function maxWidth(breakpoint) {
@@ -29,8 +29,9 @@ export function betweenWidth(startBreakpoint, endBreakpoint) {
     const endWidth = theme.breakpoints[endBreakpoint];
     error(startWidth, startBreakpoint);
     error(endWidth, endBreakpoint);
-    return `@media (min-width: ${startWidth}px) and (max-width: ${endWidth -
-      1}px)`;
+    return `@media (min-width: ${startWidth}px) and (max-width: ${
+      endWidth - 1
+    }px)`;
   };
 }
 

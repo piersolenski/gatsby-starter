@@ -20,7 +20,7 @@ export default function Layout({ children }) {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header siteTitle={data.site.siteMetadata.title} />
