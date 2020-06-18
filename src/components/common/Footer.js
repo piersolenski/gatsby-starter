@@ -22,14 +22,14 @@ const Social = styled.a`
   justify-self: flex-end;
 `;
 
-export default function Footer({ author }) {
+export default function Footer({ title }) {
   return (
     <Wrapper as="footer">
       <Copyright>
         &copy;&nbsp;
         {new Date().getFullYear()}
         &nbsp;
-        {author}
+        {title}
       </Copyright>
       <Social href="https://github.com/superfunkminister/gatsby-starter">
         <Github />
@@ -39,5 +39,5 @@ export default function Footer({ author }) {
 }
 
 Footer.propTypes = {
-  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };

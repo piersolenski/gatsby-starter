@@ -3,9 +3,11 @@ const THEME = require(`./src/utils/theme`);
 module.exports = {
   siteMetadata: {
     title: `Gatsby Starter`,
+    titleTemplate: '%s | Gatsby Starter',
     description: `Everything you need for a sweet Gatsby site.`,
-    author: `Piers Olenski`,
     siteUrl: `https://www.example.com`,
+    image: '/static/open-graph.png',
+    twitterUsername: '',
   },
   plugins: [
     {

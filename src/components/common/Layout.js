@@ -15,7 +15,6 @@ export default function Layout({ children }) {
           site {
             siteMetadata {
               title
-              author
             }
           }
         }
@@ -25,7 +24,7 @@ export default function Layout({ children }) {
           <GlobalStyles />
           <Header siteTitle={data.site.siteMetadata.title} />
           {children}
-          <Footer author={data.site.siteMetadata.author} />
+          <Footer title={data.site.siteMetadata.title} />
         </ThemeProvider>
       )}
     />
