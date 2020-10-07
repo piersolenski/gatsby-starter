@@ -34,9 +34,9 @@ const Wrapper = styled.div`
   padding: 12px 24px;
 `;
 
-const getElement = (href, onClick, to) => {
+const getElement = (href, onClick, to, type) => {
   if (href) return 'a';
-  if (onClick) return 'button';
+  if (onClick || type) return 'button';
   if (to) return Link;
   return 'div';
 };
@@ -52,7 +52,7 @@ export default function Button({
 }) {
   return (
     <Wrapper
-      as={getElement(href, onClick, to)}
+      as={getElement(href, onClick, to, type)}
       className={className}
       href={href}
       onClick={onClick}
