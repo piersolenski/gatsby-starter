@@ -75,8 +75,8 @@ export default function Main() {
       <Aside>
         <H2>Features</H2>
         <ul>
-          {features.map((feature, i) => (
-            <Feature key={i} as="li">
+          {features.map((feature) => (
+            <Feature key={feature} as="li">
               {feature}
             </Feature>
           ))}
