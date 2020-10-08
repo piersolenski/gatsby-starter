@@ -48,7 +48,6 @@
     "gatsby-plugin-react-helmet": "^3.3.13",
     "gatsby-plugin-sharp": "^2.6.39",
     "gatsby-plugin-styled-components": "^3.3.13",
-    "gatsby-plugin-svg-sprite": "^2.0.1",
     "gatsby-source-filesystem": "^2.3.33",
     "gatsby-transformer-sharp": "^2.5.17",
     "husky": "^4.3.0",
