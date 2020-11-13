@@ -1,52 +1,20 @@
-function invariant(condition, message) {
-  if (!condition) {
-    throw new Error(message);
-  }
-}
+import invariant from './invariant';
 
 const error = (breakpoint) =>
   `Breakpoint "${breakpoint}" does not exist in theme`;
 
-export function maxWidth(breakpoint) {
+export function max(dimension, breakpoint) {
   return function getStyle({ theme }) {
-    const width = theme.breakpoints[breakpoint];
-    error(width, breakpoint);
-    return `@media (max-width: ${width - 1}px)`;
+    const value = theme.breakpoints[breakpoint];
+    invariant(value, error(breakpoint));
+    return `max-${dimension}: ${value - 1}px`;
   };
 }
 
-export function minWidth(breakpoint) {
+export function min(dimension, breakpoint) {
   return function getStyle({ theme }) {
-    const width = theme.breakpoints[breakpoint];
-    error(width, breakpoint);
-    return `@media (min-width: ${width}px)`;
-  };
-}
-
-export function betweenWidth(startBreakpoint, endBreakpoint) {
-  return function getStyle({ theme }) {
-    const startWidth = theme.breakpoints[startBreakpoint];
-    const endWidth = theme.breakpoints[endBreakpoint];
-    error(startWidth, startBreakpoint);
-    error(endWidth, endBreakpoint);
-    return `@media (min-width: ${startWidth}px) and (max-width: ${
-      endWidth - 1
-    }px)`;
-  };
-}
-
-export function minHeight(breakpoint) {
-  return function getStyle({ theme }) {
-    const height = theme.breakpoints[breakpoint];
-    error(height, breakpoint);
-    return `@media (min-height: ${height}px)`;
-  };
-}
-
-export function maxHeight(breakpoint) {
-  return function getStyle({ theme }) {
-    const height = theme.breakpoints[breakpoint];
-    invariant(height, breakpoint);
-    return `@media (max-height: ${height - 1}px)`;
+    const value = theme.breakpoints[breakpoint];
+    invariant(value, error(breakpoint));
+    return `min-${dimension}: ${value}px`;
   };
 }
