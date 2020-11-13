@@ -25,7 +25,7 @@ export default function Layout({ children }) {
           <Helmet>
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link
-              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap"
               rel="stylesheet"
             />
           </Helmet>
