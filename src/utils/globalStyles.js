@@ -20,7 +20,17 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  body {
+  /* Remove default margins */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
     margin: 0;
   }
 
