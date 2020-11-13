@@ -26,7 +26,7 @@ const Content = styled.div`
     grid-column: span 12;
   }
   @media (${min('width', 'tablet')}) {
-    grid-column: span 8;
+    grid-column: span 9;
   }
 `;
 
