@@ -8,6 +8,7 @@ module.exports = {
   breakpoints: {
     mobilePortrait: 320,
     tablet: 767,
+    laptop: 1440,
     desktop: 1920,
   },
 };
