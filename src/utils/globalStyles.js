@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import lock from './lock';
 
 export default createGlobalStyle`
+
+  :root {
+    ${lock('--baseline', '17px', '21px')}
+  }
+
   *,
   *::before,
   *::after {
