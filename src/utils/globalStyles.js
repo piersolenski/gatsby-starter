@@ -1,22 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import SourceSansProBold from '../fonts/SourceSansPro-Bold.ttf';
-import SourceSansProRegular from '../fonts/SourceSansPro-Regular.ttf';
 
 export default createGlobalStyle`
 
-  @font-face {
-    font-family: SourceSansPro;
-    src: url('${SourceSansProBold}') format('truetype');
-    font-weight: bold;
-  }
-
-
-  @font-face {
-    font-family: SourceSansPro;
-    src: url('${SourceSansProRegular}') format('truetype');
-    font-weight: normal;
-  }
-
+  /* If you are using Google Fonts, consider using https://www.gatsbyjs.com/plugins/gatsby-plugin-google-fonts/ */
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap');
 
   *,
   *::before,
@@ -26,9 +13,7 @@ export default createGlobalStyle`
   }
 
   html {
-    font-family: SourceSansPro;
-    color: ${(props) => props.theme.colors.black};
-    background: ${(props) => props.theme.colors.white}; 
+    font-family: 'Nunito Sans', sans-serif;
     overflow-y: scroll;
   }
 
