@@ -1,28 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-
 import styled from 'styled-components';
-import { darken } from 'polished';
+import styledMap from 'styled-map';
+import { darken, lighten } from 'polished';
+
+import lock from '../../utils/lock';
 
 const Wrapper = styled.div`
-  color: ${({ theme }) => theme.colors.white};
-  background: ${({ theme }) => theme.colors.purple};
-  appearance: none;
-  border-radius: 36px;
+  ${lock('font-size', '13px', '15px')};
+  color: ${styledMap('color', {
+    black: ({ theme }) => theme.colors.white,
+    white: ({ theme }) => theme.colors.black,
+  })};
+  background: ${styledMap('color', {
+    black: ({ theme }) => theme.colors.black,
+    white: ({ theme }) => theme.colors.white,
+  })};
   text-align: center;
   font-weight: bold;
-  border: 0;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 24px;
-  position: relative;
-  text-decoration: none;
+  line-height: 1.5em;
   display: inline-block;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: color 0.2s ease;
+  will-change: color;
+  padding: 0.75em 1em;
   &:hover {
-    background: ${({ theme }) => darken(0.1, theme.colors.purple)};
+    color: ${styledMap('color', {
+      black: ({ theme }) => darken(0.25, theme.colors.white),
+      white: ({ theme }) => lighten(0.5, theme.colors.black),
+    })};
   }
   &:active {
     transform: scale(0.975);
@@ -30,8 +37,6 @@ const Wrapper = styled.div`
   &:focus:not(:focus-visible) {
     outline: none;
   }
-  font-size: 14px;
-  padding: 12px 24px;
 `;
 
 const getElement = (href, onClick, to, type) => {
@@ -43,6 +48,7 @@ const getElement = (href, onClick, to, type) => {
 
 export default function Button({
   className,
+  color,
   children,
   href,
   onClick,
@@ -52,6 +58,7 @@ export default function Button({
 }) {
   return (
     <Wrapper
+      color={color}
       as={getElement(href, onClick, to, type)}
       className={className}
       href={href}
@@ -60,12 +67,13 @@ export default function Button({
       to={to}
       type={type}
     >
-      {children} →
+      {children}
     </Wrapper>
   );
 }
 
 Button.propTypes = {
+  color: PropTypes.oneOf(['black', 'white']),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   href: PropTypes.string,

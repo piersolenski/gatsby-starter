@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import lock from '../../utils/lock';
 import Grid from './Grid';
 
 const ROUTES = [
@@ -10,37 +11,42 @@ const ROUTES = [
   { name: 'About', path: '/about' },
 ];
 
-const Wrapper = styled(Grid)`
+const Inner = styled(Grid)`
   height: 96px;
   align-items: center;
 `;
 
 const Logo = styled(Link)`
-  font-size: 21px;
+  ${lock('font-size', '17px', '19px')};
+  color: ${({ theme }) => theme.colors.white};
   font-weight: bold;
-  grid-column: col / span 6;
+  grid-column: 1 / span 6;
+  justify-self: flex-start;
 `;
 
 const Nav = styled.nav`
-  grid-column: col 7 / span 6;
+  grid-column: 7 / span 6;
   display: inline-grid;
   grid-auto-flow: column;
   grid-gap: 4vw;
   justify-self: end;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export default function Header({ siteTitle }) {
   return (
-    <Wrapper as="header">
-      <Logo to="/">{siteTitle}</Logo>
-      <Nav>
-        {ROUTES.map((route) => (
-          <Link key={route.path} to={route.path}>
-            {route.name}
-          </Link>
-        ))}
-      </Nav>
-    </Wrapper>
+    <header>
+      <Inner>
+        <Logo to="/">{siteTitle}</Logo>
+        <Nav>
+          {ROUTES.map((route) => (
+            <Link key={route.path} to={route.path}>
+              {route.name}
+            </Link>
+          ))}
+        </Nav>
+      </Inner>
+    </header>
   );
 }
 

@@ -1,22 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import SourceSansProBold from '../fonts/SourceSansPro-Bold.ttf';
-import SourceSansProRegular from '../fonts/SourceSansPro-Regular.ttf';
 
 export default createGlobalStyle`
 
-  @font-face {
-    font-family: SourceSansPro;
-    src: url('${SourceSansProBold}') format('truetype');
-    font-weight: bold;
-  }
-
-
-  @font-face {
-    font-family: SourceSansPro;
-    src: url('${SourceSansProRegular}') format('truetype');
-    font-weight: normal;
-  }
-
+  /* If you are using Google Fonts, consider using https://www.gatsbyjs.com/plugins/gatsby-plugin-google-fonts/ */
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap');
 
   *,
   *::before,
@@ -26,14 +13,32 @@ export default createGlobalStyle`
   }
 
   html {
-    font-family: SourceSansPro;
-    color: ${(props) => props.theme.colors.black};
-    background: ${(props) => props.theme.colors.white}; 
+    font-family: 'Nunito Sans', sans-serif;
+    color: ${(props) => props.theme.colors.grey};
+    background: ${(props) => props.theme.colors.black}; 
     overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Remove default margins */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
   }
 
   body {
-    margin: 0;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
   }
 
   audio,
@@ -49,6 +54,10 @@ export default createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    /* A elements that don't have a class get default styles */
+    &:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
   }
 
   figure,
@@ -76,6 +85,18 @@ export default createGlobalStyle`
     padding-left: 0;
     list-style-position: inside;
   }
+  
+  /* Remove all animations and transitions for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 
   ::selection { 
     color: ${({ theme }) => theme.colors.white};
@@ -91,10 +112,18 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.purple};
+    background: ${({ theme }) => theme.colors.pink};
   }
 
-  .js-focus-visible :focus:not(.focus-visible) {
-    outline: none;
+  *:focus {
+    outline: 2px solid hotpink;
+  }
+
+  *:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  *:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.pink};
   }
 `;
