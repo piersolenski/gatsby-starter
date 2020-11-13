@@ -1,4 +1,5 @@
 const THEME = require(`./src/utils/theme`);
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
