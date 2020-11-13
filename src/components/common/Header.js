@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import { P } from './Typography';
 
 import lock from '../../utils/lock';
 import Grid from './Grid';
@@ -12,7 +13,7 @@ const ROUTES = [
 ];
 
 const Inner = styled(Grid)`
-  height: 96px;
+  ${lock('height', '80px', '96px')};
   align-items: center;
 `;
 
@@ -40,9 +41,9 @@ export default function Header({ siteTitle }) {
         <Logo to="/">{siteTitle}</Logo>
         <Nav>
           {ROUTES.map((route) => (
-            <Link key={route.path} to={route.path}>
+            <P as={Link} key={route.path} to={route.path}>
               {route.name}
-            </Link>
+            </P>
           ))}
         </Nav>
       </Inner>
