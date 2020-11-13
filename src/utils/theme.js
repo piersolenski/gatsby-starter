@@ -1,8 +1,9 @@
 module.exports = {
   colors: {
     white: '#fff',
-    black: '#111',
-    purple: '#639',
+    black: '#111010',
+    grey: '#888888',
+    pink: '#ff437f',
   },
   breakpoints: {
     mobilePortrait: 320,

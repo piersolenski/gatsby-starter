@@ -2,86 +2,90 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Button from '../common/Button';
+import Section from '../common/Section';
 import Grid from '../common/Grid';
-import { H1, H2, P } from '../common/Typography';
-import { maxWidth, minWidth } from '../../utils/breakpoints';
+import { H2, P } from '../common/Typography';
+import { max, min } from '../../utils/breakpoints';
 
-const features = [
-  'Gatsby',
-  'Styled Components',
-  'Polished',
-  'ESLint',
-  'SVGR',
-  'Sitemap generation',
-  'Google Analytics',
-];
-
-const Features = styled.div`
-  ${maxWidth('tablet')} {
-    grid-column: col 1 / span 12;
+const Spiel = styled.div`
+  @media (${max('width', 'tablet')}) {
+    grid-column: 1 / -1;
   }
-  ${minWidth('tablet')} {
-    grid-column: col 1 / span 8;
+  @media (${min('width', 'tablet')}) {
+    grid-column: span 8;
   }
 `;
 
 const Aside = styled.aside`
-  ${maxWidth('tablet')} {
-    grid-column: col 1 / span 12;
+  @media (${max('width', 'tablet')}) {
+    grid-column: 1 / -1;
   }
-  ${minWidth('tablet')} {
-    grid-column: col 9 / span 4;
+  @media (${min('width', 'tablet')}) {
+    grid-column: span 4;
+  }
+  ${H2} {
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
-const Feature = styled(P)`
+const Feature = styled(P).attrs(() => ({
+  as: 'li',
+}))`
   margin: 0;
 `;
 
 export default function Main() {
   return (
-    <Grid padded>
-      <Features>
-        <H1>About</H1>
-        <P>
-          Gatsby.js is Internet Scale. Forget complicated deploys with databases
-          and servers and their expensive, time-consuming setup costs,
-          maintenance, and scaling fears. Gatsby.js builds your site as “static”
-          files which can be deployed easily on dozens of services.
-        </P>
-        <P>
-          Do not build a website with last decade’s tech. The future of the web
-          is mobile, JavaScript and APIs—the
-          <a href="https://jamstack.org/">JAMstack</a>. Every website is a web
-          app and every web app is a website. Gatsby.js is the universal
-          JavaScript framework you’ve been waiting for.
-        </P>
-        <P>
-          Gatsby.js is a PWA (Progressive Web App) generator. You get code and
-          data splitting out-of-the-box. Gatsby loads only the critical HTML,
-          CSS, data, and JavaScript so your site loads as fast as possible. Once
-          loaded, Gatsby prefetches resources for other pages so clicking around
-          the site feels incredibly fast.
-        </P>
-        <P>
-          Enjoy the power of the latest web technologies – React.js , Webpack ,
-          modern JavaScript and CSS and more — all set up and waiting for you to
-          start building.
-        </P>
-        <Button href="https://github.com/superfunkminister/gatsby-starter">
-          Read Me
-        </Button>
-      </Features>
-      <Aside>
-        <H2>Features</H2>
-        <ul>
-          {features.map((feature) => (
-            <Feature key={feature} as="li">
-              {feature}
-            </Feature>
-          ))}
-        </ul>
-      </Aside>
-    </Grid>
+    <Section>
+      <Grid>
+        <Spiel>
+          <P>
+            Lacinia facilisis metus tincidunt risus elit ridiculus tempor massa,
+            interdum ultrices rutrum pharetra faucibus litora mi, augue ad
+            vulputate erat facilisi mattis curae. Mattis mus libero ridiculus
+            porta luctus amet senectus facilisi, tincidunt pulvinar lacinia
+            rutrum ut netus est, dui volutpat ex malesuada molestie auctor
+            integer.
+          </P>
+          <P>
+            Odio senectus hendrerit ullamcorper penatibus phasellus fringilla
+            ligula laoreet turpis non, nulla lorem commodo quisque mattis ad
+            diam tempor dictumst volutpat, efficitur est adipiscing nisi nec
+            maximus vehicula id eu. Integer id faucibus lorem amet finibus
+            primis habitant accumsan phasellus nisi, aptent justo posuere ac vel
+            mi eleifend ultrices fringilla diam commodo, leo per mus habitasse
+            torquent lobortis maximus sapien viverra.
+          </P>
+          <P>
+            Cubilia justo adipiscing laoreet phasellus malesuada facilisi
+            viverra augue vestibulum congue nisl erat, consequat platea
+            facilisis duis fames aliquam curae pharetra ornare ad cursus, fusce
+            elementum tortor dictumst nam ullamcorper tellus nullam egestas nisi
+            tincidunt.
+          </P>
+          <Button
+            color="white"
+            href="https://github.com/superfunkminister/gatsby-starter"
+          >
+            Read the docs
+          </Button>
+        </Spiel>
+        <Aside>
+          <ul css="margin: 0;">
+            {[
+              'Himenaeos in dis orci taciti',
+              'Elementum id feugiat vehicula',
+              'Iaculis ad sollicitudin',
+              'Cursus dignissim volutpat ego',
+              'Mus euismod luctus sodales',
+              'Morbi primis ridiculus',
+              'Volutpat diam mi justicus',
+            ].map((feature, i) => (
+              <Feature key={i}>{feature}</Feature>
+            ))}
+          </ul>
+        </Aside>
+      </Grid>
+    </Section>
   );
 }

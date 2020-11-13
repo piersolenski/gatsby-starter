@@ -14,6 +14,8 @@ export default createGlobalStyle`
 
   html {
     font-family: 'Nunito Sans', sans-serif;
+    color: ${(props) => props.theme.colors.grey};
+    background: ${(props) => props.theme.colors.black}; 
     overflow-y: scroll;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -110,6 +112,8 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.pink};
+  }
 
   *:focus {
     outline: 2px solid hotpink;
@@ -120,6 +124,6 @@ export default createGlobalStyle`
   }
 
   *:focus-visible {
-    outline: 2px solid hotpink;
+    outline: 2px solid ${({ theme }) => theme.colors.pink};
   }
 `;
