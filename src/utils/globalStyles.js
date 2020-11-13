@@ -15,6 +15,7 @@ export default createGlobalStyle`
   html {
     font-family: 'Nunito Sans', sans-serif;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
