@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-
-  /* If you are using Google Fonts, consider using https://www.gatsbyjs.com/plugins/gatsby-plugin-google-fonts/ */
-  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap');
-
   *,
   *::before,
   *::after {
