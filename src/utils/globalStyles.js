@@ -110,10 +110,16 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.purple};
+
+  *:focus {
+    outline: 2px solid hotpink;
   }
 
-  .js-focus-visible :focus:not(.focus-visible) {
-    outline: none;
+  *:focus:not(:focus-visible) {
+    outline: 0;
+  }
+
+  *:focus-visible {
+    outline: 2px solid hotpink;
   }
 `;
