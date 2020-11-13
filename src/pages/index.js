@@ -16,7 +16,7 @@ export default function Index() {
       />
       <Hero>
         <H1>Dolor sociosqu curae mi torquent a phasellus class primis.</H1>
-        <Button color="black" to="/about">
+        <Button size="large" color="black" to="/about">
           Read more
         </Button>
       </Hero>

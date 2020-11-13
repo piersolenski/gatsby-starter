@@ -8,7 +8,10 @@ import { darken, lighten } from 'polished';
 import lock from '../../utils/lock';
 
 const Wrapper = styled.div`
-  ${lock('font-size', '13px', '15px')};
+  ${styledMap('size', {
+    large: lock('font-size', '15px', '19px'),
+    default: lock('font-size', '13px', '15px'),
+  })};
   color: ${styledMap('color', {
     black: ({ theme }) => theme.colors.white,
     white: ({ theme }) => theme.colors.black,
@@ -51,6 +54,7 @@ export default function Button({
   color,
   children,
   href,
+  size,
   onClick,
   target,
   type,
@@ -59,6 +63,7 @@ export default function Button({
   return (
     <Wrapper
       color={color}
+      size={size}
       as={getElement(href, onClick, to, type)}
       className={className}
       href={href}
@@ -81,4 +86,5 @@ Button.propTypes = {
   target: PropTypes.bool,
   to: PropTypes.string,
   type: PropTypes.string,
+  size: PropTypes.oneOf(['large']),
 };
