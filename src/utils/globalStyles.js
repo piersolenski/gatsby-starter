@@ -52,6 +52,10 @@ export default createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    /* A elements that don't have a class get default styles */
+    &:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
   }
 
   figure,
