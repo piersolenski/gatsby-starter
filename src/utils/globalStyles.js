@@ -34,6 +34,11 @@ export default createGlobalStyle`
     margin: 0;
   }
 
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+  }
+
   audio,
   canvas,
   iframe,
