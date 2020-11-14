@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { darken } from 'polished';
-
-import Github from '../icons/GitHub';
-import Grid from './Grid';
-import { Small } from './Typography';
-import lock from '../../utils/lock';
+import Github from 'icons/GitHub';
+import lock from 'utils/lock';
+import Grid from 'components/common/Grid';
+import { Small } from 'components/common/Typography';
 
 const Wrapper = styled.footer`
   border-top: 1px solid ${({ theme }) => darken(0.8, theme.colors.white)};

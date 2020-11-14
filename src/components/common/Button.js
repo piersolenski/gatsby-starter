@@ -4,8 +4,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import styledMap from 'styled-map';
 import { darken, lighten } from 'polished';
-
-import lock from '../../utils/lock';
+import lock from 'utils/lock';
 
 const Wrapper = styled.div`
   ${styledMap('size', {

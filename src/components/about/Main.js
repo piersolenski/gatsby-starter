@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import Button from '../common/Button';
-import Section from '../common/Section';
-import Grid from '../common/Grid';
-import { H2, P } from '../common/Typography';
-import { max, min } from '../../utils/breakpoints';
-import rowGap from '../../utils/rowGap';
+import Button from 'components/common/Button';
+import Section from 'components/common/Section';
+import Grid from 'components/common/Grid';
+import { H2, P } from 'components/common/Typography';
+import { max, min } from 'utils/breakpoints';
+import rowGap from 'utils/rowGap';
 
 const Spiel = styled.div`
   ${rowGap(1)};

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Layout from '../components/common/Layout';
-import SEO from '../components/common/Seo';
-import Hero from '../components/common/Hero';
-import Button from '../components/common/Button';
-import { H1 } from '../components/common/Typography';
-import Main from '../components/home/Main';
+import Layout from 'components/common/Layout';
+import SEO from 'components/common/Seo';
+import Hero from 'components/common/Hero';
+import Button from 'components/common/Button';
+import { H1 } from 'components/common/Typography';
+import Main from 'components/home/Main';
 
 export default function Index() {
   return (

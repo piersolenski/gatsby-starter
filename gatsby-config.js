@@ -11,6 +11,7 @@ module.exports = {
     twitterUsername: '',
   },
   plugins: [
+    'gatsby-plugin-resolve-src',
     {
       resolve: 'gatsby-plugin-eslint',
       options: {

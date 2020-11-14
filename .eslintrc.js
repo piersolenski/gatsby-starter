@@ -1,4 +1,11 @@
 module.exports = {
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src'],
+      },
+    },
+  },
   extends: [
     'airbnb',
     'plugin:jsx-a11y/recommended',

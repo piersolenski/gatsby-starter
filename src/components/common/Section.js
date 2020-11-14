@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import lock from '../../utils/lock';
+import lock from 'utils/lock';
 
 const Section = styled.section`
   ${lock('padding-top', '50px', '100px')};

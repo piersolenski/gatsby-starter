@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Layout from '../components/common/Layout';
-import SEO from '../components/common/Seo';
-import Button from '../components/common/Button';
-import Hero from '../components/common/Hero';
-import { H1 } from '../components/common/Typography';
+import Layout from 'components/common/Layout';
+import SEO from 'components/common/Seo';
+import Button from 'components/common/Button';
+import Hero from 'components/common/Hero';
+import { H1 } from 'components/common/Typography';
 
 export default function NotFoundPage() {
   return (
