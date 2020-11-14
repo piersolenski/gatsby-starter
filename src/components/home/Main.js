@@ -5,8 +5,14 @@ import Section from '../common/Section';
 import Grid from '../common/Grid';
 import { H2, P } from '../common/Typography';
 import { max, min } from '../../utils/breakpoints';
+import rowGap from '../../utils/rowGap';
+
+const Items = styled(Grid)`
+  ${rowGap(2)};
+`;
 
 const Item = styled.div`
+  ${rowGap(1, 'center')};
   text-align: center;
   @media (${max('width', 'tablet')}) {
     grid-column: span 12;
@@ -22,7 +28,7 @@ const Item = styled.div`
 export default function Main() {
   return (
     <Section>
-      <Grid>
+      <Items>
         <Item>
           <H2>Partur pharetra nostra</H2>
           <P>
@@ -47,7 +53,7 @@ export default function Main() {
             risus pharetra iaculis amet sapien senectus curae.
           </P>
         </Item>
-      </Grid>
+      </Items>
     </Section>
   );
 }

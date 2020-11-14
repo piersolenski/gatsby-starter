@@ -6,8 +6,10 @@ import Section from '../common/Section';
 import Grid from '../common/Grid';
 import { H2, P } from '../common/Typography';
 import { max, min } from '../../utils/breakpoints';
+import rowGap from '../../utils/rowGap';
 
 const Spiel = styled.div`
+  ${rowGap(1)};
   @media (${max('width', 'tablet')}) {
     grid-column: 1 / -1;
   }

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Grid from './Grid';
 import lock from '../../utils/lock';
 import { min, max } from '../../utils/breakpoints';
+import rowGap from '../../utils/rowGap';
 
 const Wrapper = styled.section`
   color: ${({ theme }) => theme.colors.black};
@@ -22,6 +23,7 @@ const Inner = styled(Grid)`
 
 const Content = styled.div`
   color: ${({ theme }) => theme.colors.black};
+  ${rowGap(1)};
   @media (${max('width', 'tablet')}) {
     grid-column: span 12;
   }
