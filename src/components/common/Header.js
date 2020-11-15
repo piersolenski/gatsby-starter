@@ -28,7 +28,7 @@ const Nav = styled.nav`
   grid-column: 7 / span 6;
   display: inline-grid;
   grid-auto-flow: column;
-  grid-gap: 4vw;
+  grid-gap: 3.8vw;
   justify-self: end;
   color: ${({ theme }) => theme.colors.white};
 `;
