@@ -27,6 +27,7 @@
   "license": "WTFPL",
   "scripts": {
     "build": "gatsby build",
+    "clean": "rm -rf ./.cache && rm -rf ./public",
     "dev": "gatsby develop",
     "start": "npm run dev",
     "bootstrap": "node node_modules/gatsby-starter-bootstrap",
