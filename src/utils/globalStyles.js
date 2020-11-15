@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import lock from './lock';
+import lock from 'utils/lock';
 
 export default createGlobalStyle`
 

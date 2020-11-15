@@ -1,4 +1,4 @@
-import invariant from './invariant';
+import invariant from 'utils/invariant';
 
 const error = (breakpoint) =>
   `Breakpoint "${breakpoint}" does not exist in theme`;

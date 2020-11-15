@@ -2,10 +2,9 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { P } from './Typography';
-
-import lock from '../../utils/lock';
-import Grid from './Grid';
+import lock from 'utils/lock';
+import { P } from 'components/common/Typography';
+import Grid from 'components/common/Grid';
 
 const ROUTES = [
   { name: 'Home', path: '/' },
@@ -29,7 +28,7 @@ const Nav = styled.nav`
   grid-column: 7 / span 6;
   display: inline-grid;
   grid-auto-flow: column;
-  grid-gap: 4vw;
+  grid-gap: 3.8vw;
   justify-self: end;
   color: ${({ theme }) => theme.colors.white};
 `;

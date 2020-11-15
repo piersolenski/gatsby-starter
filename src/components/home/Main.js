@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import Section from '../common/Section';
-import Grid from '../common/Grid';
-import { H2, P } from '../common/Typography';
-import { max, min } from '../../utils/breakpoints';
-import rowGap from '../../utils/rowGap';
+import Section from 'components/common/Section';
+import Grid from 'components/common/Grid';
+import { H2, P } from 'components/common/Typography';
+import { max, min } from 'utils/breakpoints';
+import rowGap from 'utils/rowGap';
 
 const Items = styled(Grid)`
   ${rowGap(2)};

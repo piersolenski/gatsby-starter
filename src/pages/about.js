@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Layout from '../components/common/Layout';
-import SEO from '../components/common/Seo';
-import Hero from '../components/common/Hero';
-import Main from '../components/about/Main';
-import { H1 } from '../components/common/Typography';
+import Layout from 'components/common/Layout';
+import SEO from 'components/common/Seo';
+import Hero from 'components/common/Hero';
+import Main from 'components/about/Main';
+import { H1 } from 'components/common/Typography';
 
 export default function About() {
   return (

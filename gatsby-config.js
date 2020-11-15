@@ -1,16 +1,16 @@
 const THEME = require(`./src/utils/theme`);
 require('dotenv').config();
+const pkg = require('./package.json');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter`,
-    titleTemplate: '%s | Gatsby Starter',
-    description: `Everything you need for a sweet Gatsby site.`,
-    siteUrl: `https://www.example.com`,
-    image: '/static/open-graph.png',
+    title: pkg.title,
+    description: pkg.description,
+    siteUrl: pkg.homepage,
     twitterUsername: '',
   },
   plugins: [
+    'gatsby-plugin-resolve-src',
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
@@ -43,8 +43,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: pkg.title,
+        short_name: pkg.title,
         start_url: `/`,
         background_color: THEME.colors.black,
         theme_color: THEME.colors.white,
@@ -52,13 +52,13 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-********-*`,
-        head: false,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `UA-********-*`,
+    //     head: false,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // `gatsby-plugin-offline`,

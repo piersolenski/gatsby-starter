@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import GlobalStyles from '../../utils/globalStyles';
-import theme from '../../utils/theme';
-import Header from './Header';
-import Footer from './Footer';
+import GlobalStyles from 'utils/globalStyles';
+import theme from 'utils/theme';
+import Header from 'components/common/Header';
+import Footer from 'components/common/Footer';
 
 export default function Layout({ children }) {
   return (
@@ -23,6 +23,7 @@ export default function Layout({ children }) {
       render={(data) => (
         <ThemeProvider theme={theme}>
           <Helmet>
+            {/* If you are using Google Fonts, consider using https://www.gatsbyjs.com/plugins/gatsby-plugin-google-fonts/ */}
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link
               href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700&display=swap"
