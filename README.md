@@ -1,3 +1,5 @@
+<!-- Default README -->
+
 # Gatsby Starter
 
 A simple boilerplate for kickstarting [Gatsby](https://www.gatsbyjs.org/) projects.
