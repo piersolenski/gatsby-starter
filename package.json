@@ -58,7 +58,7 @@
     "gatsby-transformer-sharp": "^2.5.17",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
-    "plop-pack-gatsby-starter": "^0.0.10",
+    "plop-pack-gatsby-starter": "^0.0.11",
     "prettier": "^2.1.2"
   },
   "repository": {
