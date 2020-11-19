@@ -37,7 +37,7 @@ export default function SEO({ title, description, image, lang }) {
         lang,
       }}
       title={seo.title}
-      titleTemplate={`%s | ${seo.title}`}
+      titleTemplate={`%s | ${site.siteMetadata.defaultTitle}`}
     >
       <meta name="description" content={seo.description} />
       <meta name="image" content={image} />
@@ -68,8 +68,6 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
-  title: null,
-  description: null,
   lang: 'en',
   image: '/static/open-graph.png',
 };
