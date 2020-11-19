@@ -17,7 +17,6 @@
     "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-robots-txt": "^1.5.3",
     "gatsby-plugin-sitemap": "^2.4.15",
-    "gatsby-starter-bootstrap": "git+https://github.com/superfunkminister/gatsby-starter-bootstrap.git",
     "polished": "^3.6.7",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
@@ -31,6 +30,7 @@
   ],
   "license": "WTFPL",
   "scripts": {
+    "bootstrap": "plop bootstrap",
     "build": "gatsby build",
     "clean": "rm -rf ./.cache && rm -rf ./public",
     "dev": "gatsby develop",
