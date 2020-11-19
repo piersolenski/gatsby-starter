@@ -43,4 +43,4 @@ Gatsby will perform an optimized production build for your site generating stati
 
 ## Generating code
 
-Gatsy Starter uses [Plop](https://github.com/plopjs/plop) to automate repetivitve workflows, such as creatiing components or adding a CMS to your project! Run `npm run plop` (or simply `plop` if you have it installed globally) to see your options.
+Gatsy Starter uses [Plop](https://github.com/plopjs/plop) to automate repetivitve workflows, such as creating components or adding a CMS to your project! Run `npm run plop` (or simply `plop` if you have it installed globally) to see your options.
