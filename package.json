@@ -34,10 +34,8 @@
     "build": "gatsby build",
     "clean": "rm -rf ./.cache && rm -rf ./public",
     "dev": "gatsby develop",
-    "start": "npm run dev",
-    "bootstrap": "node node_modules/gatsby-starter-bootstrap",
-    "format": "prettier --write \"src/**/*.js\"",
-    "lint": "eslint src/**/*.js"
+    "plop": "plop",
+    "start": "npm run dev"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
