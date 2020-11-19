@@ -35,7 +35,7 @@
     "clean": "rm -rf ./.cache && rm -rf ./public",
     "dev": "gatsby develop",
     "plop": "plop",
-    "start": "npm run dev"
+    "start": "plop bootstrap"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
