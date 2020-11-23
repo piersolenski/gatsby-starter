@@ -15,8 +15,7 @@ const Wrapper = styled.section`
 `;
 
 const Inner = styled(Grid)`
-  ${lock('max-height', '300px', '700px')};
-  height: 75vh;
+  ${lock('height', '300px', '700px')};
   align-items: center;
 `;
 
