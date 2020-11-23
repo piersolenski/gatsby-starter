@@ -2,6 +2,8 @@
 
 # Gatsby Starter
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8f96ae93-956c-45ae-b2a8-bb4936ceddd0/deploy-status)](https://app.netlify.com/sites/gatsby-starter-template/deploys)
+
 A simple boilerplate for kickstarting [Gatsby](https://www.gatsbyjs.org/) projects.
 
 Check out the [demo](https://gatsby-starter-template.netlify.com)!
