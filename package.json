@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter",
   "title": "Gatsby Starter",
-  "homepage": "https://github.com/superfunkminister/gatsby-starter",
+  "homepage": "https://github.com/piersolenski/gatsby-starter",
   "private": true,
   "description": "A simple starter project to get up and developing quickly with Gatsby",
   "version": "3.0.1",
@@ -64,10 +64,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/superfunkminister/gatsby-starter"
+    "url": "https://github.com/piersolenski/gatsby-starter"
   },
   "bugs": {
-    "url": "https://github.com/superfunkminister/gatsby-starter/issues"
+    "url": "https://github.com/piersolenski/gatsby-starter/issues"
   },
   "husky": {
     "hooks": {

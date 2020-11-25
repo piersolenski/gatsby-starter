@@ -66,7 +66,7 @@ export default function Main() {
           </P>
           <Button
             color="white"
-            href="https://github.com/superfunkminister/gatsby-starter"
+            href="https://github.com/piersolenski/gatsby-starter"
           >
             Read the docs
           </Button>

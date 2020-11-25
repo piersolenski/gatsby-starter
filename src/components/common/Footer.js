@@ -36,7 +36,7 @@ export default function Footer({ title }) {
           &nbsp;
           {title}
         </Copyright>
-        <Social href="https://github.com/superfunkminister/gatsby-starter">
+        <Social href="https://github.com/piersolenski/gatsby-starter">
           <Github />
         </Social>
       </Inner>
