@@ -41,8 +41,9 @@ const Wrapper = styled.div`
   }
 `;
 
-const getElement = (href, onClick, to, type) => {
+const getElement = (href, onClick, to, type, as) => {
   if (href) return 'a';
+  if (as) return as;
   if (onClick || type) return 'button';
   if (to) return Link;
   return 'div';
@@ -58,12 +59,13 @@ export default function Button({
   target,
   type,
   to,
+  as,
 }) {
   return (
     <Wrapper
       color={color}
       size={size}
-      as={getElement(href, onClick, to, type)}
+      as={getElement(href, onClick, to, type, as)}
       className={className}
       href={href}
       onClick={onClick}
@@ -75,6 +77,19 @@ export default function Button({
     </Wrapper>
   );
 }
+
+Button.propTypes = {
+  as: PropTypes.func,
+  color: PropTypes.oneOf(['dark', 'light']),
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  href: PropTypes.string,
+  onClick: PropTypes.func,
+  target: PropTypes.bool,
+  to: PropTypes.string,
+  type: PropTypes.string,
+  size: PropTypes.oneOf(['large']),
+};
 
 Button.propTypes = {
   color: PropTypes.oneOf(['black', 'white']),
