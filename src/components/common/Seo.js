@@ -69,5 +69,5 @@ SEO.propTypes = {
 
 SEO.defaultProps = {
   lang: 'en',
-  image: '/static/open-graph.png',
+  image: '/open-graph.png',
 };
